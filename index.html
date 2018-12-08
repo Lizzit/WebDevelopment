@@ -195,6 +195,12 @@
       } 
     })() 
   </script>
+  <script>
+   document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems, options);
+  });  
+  </script>
 
   <!-- Google Analitycs-->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130663970-1"></script>
