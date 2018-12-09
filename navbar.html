@@ -38,19 +38,19 @@
 </head>
 <body>
     <!-- Fixed Navbar -->
-    <div class="navbar-fixed">
+    <div class="navbar-fixed white">
         <nav>
-            <div class="nav-wrapper white">
-                <a href="#" class="brand-logo">WebDevelopment</a>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">WebDevelopment</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-                    <i class="material-icons">menu</i>
+                <i class="material-icons">menu</i>
                 </a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="#!">Prezzi</a></li>
-                    <li><a href="come_funziona.html">Come Funziona</a></li>
-                    <li><a href="#Registrazione">Registrazione</a></li>
-                    <li><a href="#Contatti">Contatti</a></li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#!">Prezzi</a></li>
+                <li><a href="come_funziona.html">Come Funziona</a></li>
+                <li><a href="index.html#Registrazione">Registrazione</a></li>
+                <li><a href="#Contatti">Contatti</a></li>
                 </ul>
             </div>
         </nav>
@@ -62,8 +62,8 @@
             <li><a href="#Contatti">Contatti</a></li>
         </ul>
     </div>
-      <!-- Footer -->
-  <footer class="page-footer teal">
+    <!-- Footer -->
+    <footer class="page-footer teal">
         <div class="container">
             <div class="row">
                 <div id="Contatti" class="contatti col l12 s12 center">
@@ -85,6 +85,48 @@
                 Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">WebDevelopment &copy</a>
             </div>
         </div>
-      </footer>
+    </footer>
+        <!--  Scripts-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        <script> 
+            (function() { 
+                var qs,js,q,s,d=document, 
+                    gi=d.getElementById, 
+                    ce=d.createElement, 
+                    gt=d.getElementsByTagName, 
+                    id="typef_orm_share", 
+                    b="https://embed.typeform.com/"; 
+                if(!gi.call(d,id)){
+                    js=ce.call(d,"script"); 
+                    js.id=id; 
+                    js.src=b+"embed.js"; 
+                    q=gt.call(d,"script")[0]; 
+                    q.parentNode.insertBefore(js,q) 
+                } 
+            })() 
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems, options);
+            });
+    
+            // Or with jQuery
+    
+            $(document).ready(function(){
+                $('.sidenav').sidenav();
+            });
+        </script>
+    
+        <!-- Google Analitycs-->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-130663970-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'UA-130663970-1');
+        </script>
 </body>
 </html>
