@@ -38,10 +38,28 @@
 </head>
 <body>
     <!-- Fixed Navbar -->
-    <div class="navbar-fixed">
+    <div class="navbar-fixed" style="  position: fixed;
+    width: 300px;
+    left: 0;
+    top: 0;
+    margin: 0;
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+    height: 100%;
+    height: calc(100% + 60px);
+    height: -moz-calc(100%);
+    padding-bottom: 60px;
+    background-color: #fff;
+    z-index: 999;
+    overflow-y: auto;
+    will-change: transform;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translateX(-105%);
+    transform: translateX(-105%);">
         <nav>
             <div class="nav-wrapper white">
-                <a href="#" class="brand-logo">WebDevelopment</a>
+                <a href="#!" class="brand-logo">WebDevelopment</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger">
                     <i class="material-icons">menu</i>
                 </a>
@@ -52,15 +70,16 @@
                     <li><a href="index.html#Registrazione">Registrazione</a></li>
                     <li><a href="#Contatti">Contatti</a></li>
                 </ul>
-                <ul class="sidenav opacity 0" id="mobile-demo">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="prezzi.html">Prezzi</a></li>
-                    <li><a href="come_funziona.html">Come Funziona</a></li>
-                    <li><a href="index.html#Registrazione">Registrazione</a></li>
-                    <li><a href="#Contatti">Contatti</a></li>
-                </ul>
             </div>
         </nav>
+            <ul class="sidenav opacity 0" id="mobile-demo">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="prezzi.html">Prezzi</a></li>
+                <li><a href="come_funziona.html">Come Funziona</a></li>
+                <li><a href="index.html#Registrazione">Registrazione</a></li>
+                <li><a href="#Contatti">Contatti</a></li>
+            </ul>
+            
     </div>
     <!-- Begin Mailchimp Signup Form -->
     <div id="mc_embed_signup">
