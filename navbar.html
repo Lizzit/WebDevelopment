@@ -38,30 +38,34 @@
 </head>
 <body>
     <!-- Fixed Navbar -->
-    <div class="navbar-fixed white">
-        <nav>
-            <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">WebDevelopment</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="nav-wrapper white">
+                <a href="#" class="brand-logo">WebDevelopment</a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger">
                 <i class="material-icons">menu</i>
                 </a>
                 <ul class="right hide-on-med-and-down">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#!">Prezzi</a></li>
-                <li><a href="come_funziona.html">Come Funziona</a></li>
-                <li><a href="index.html#Registrazione">Registrazione</a></li>
-                <li><a href="#Contatti">Contatti</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="prezzi.html">Prezzi</a></li>
+                    <li><a href="#!">Come Funziona</a></li>
+                    <li><a href="#Registrazione">Registrazione</a></li>
+                    <li><a href="#Contatti">Contatti</a></li>
                 </ul>
             </div>
-        </nav>
-        <ul class="sidenav" id="mobile-demo">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#!">Prezzi</a></li>
-            <li><a href="come_funziona.html">Come Funziona</a></li>
-            <li><a href="index.html#Registrazione">Registrazione</a></li>
-            <li><a href="#Contatti">Contatti</a></li>
-        </ul>
-    </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">Hidden brand</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="prezzi.html">Prezzi</a></li>
+                <li><a href="#!">Come Funziona</a></li>
+                <li><a href="#Registrazione">Registrazione</a></li>
+                <li><a href="#Contatti">Contatti</a></li>
+            </ul>
+        </div>
+    </nav>
     <!-- Footer -->
     <footer class="page-footer teal">
         <div class="container">
