@@ -9,8 +9,8 @@ body {
   font-family: 'Courgette', cursive;/*insert googlefont's instruction*/
 }
 
-nav .nav-wrapper {
-    padding: 0px 50px;
+nav .navbar-collapse {
+    padding: 0px 40%;
 }
 
 nav .brand-logo {
