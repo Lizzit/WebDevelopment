@@ -122,6 +122,10 @@ footer .page-footer {
   margin: 0;
 }
 
+footer .footer-copyright{
+  align-items: left;
+}
+
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
