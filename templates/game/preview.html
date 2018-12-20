@@ -37,249 +37,15 @@
     </script>
 </head>
 <body>
-    <!-- Fixed Navbar -->
-    <div class="navbar-fixed">
-  <label for="showMenu" class="showMenu">
-  <i class="fa fa-align-justify fa-lg"></i>
-  LOGO
-</label>
-<input type="checkbox" id="showMenu" role="button">
- <ul id="menu"> 
-  <li><a href="#">Home</a></li>
-  <li><a href="prezzi.html">Template</a>
-    <ul class="hidden">
-      <li><a href="buy_game.html">Template 1</a></li>
-      <li><a href="buy_work.html"></a>Template 2</li>
-    </ul>
-  </li>
-  <li><a href="come_funziona.html">Tutorial</a>
-    <ul class="hidden"> 
-      <li><a href="http://">Tutorial 1</a></li>
-      <li><a href="http://">Tutorial 2</a></li>
-      <li><a href="http://">Tutorial 3</a></li>
-    </ul>
-  </li>
-  <li><a href="#Registrazione">Registrazione</a></li>
-  <li><a href="#Contatti">Modello</a>
-    <ul class="hidden"> 
-      <li><a href="http://">Modello 1</a></li>
-      <li><a href="http://">Modello 2</a></li>
-      <li><a href="http://">Modello 3</a></li>
-      <li><a href="http://">Modello 4</a></li>
-      <li><a href="http://">Modello 5</a></li>
-    </ul>
-  </li>
-  <li><a id="donate" href="http://">Contatti</a></li>
-</ul>
-</div>
-<style type="text/css">
- /* reset stili */
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-/* lista orizzontale */
-#menu li {
-  display: inline-block;
-  position: relative;
-}
-/* menu */
-#menu {
-  width: 100%;
-  background-color: #005996;
-  background: -moz-linear-gradient(#444, #111); /* firefox*/
-  background: linear-gradient(#444, #111);
-  border: 1px solid #222;
-  border-radius: 6px;
-  box-shadow: 1px 1px 4px #777;
-  text-align: center;
-}
-/* links */
-li a {
-  display: block;
-  padding: 12px 20px;
-  width: 150px;
-  color: #999;
-  text-transform: uppercase;
-  font: bold 0.7em 'Cougrette', cursive;
-  text-decoration: none;
-  text-shadow: 0 1px #000;
-  border-right: 1px solid #222;
-  box-shadow: 1px 0 #444;
-}
-/* rimuoviamo il bordo e l'ombreggiatura dall'ultimo link del menu */
-#donate {
-  border: none;
-  box-shadow: none;  
-}
-/* links hover */
-a:hover {
-  color: #5b9279;
-}
-/* sub menu */
-#menu li .hidden {
-  display: block;
-  position: absolute;
-  top: 100px;
-  left: 0;
-  background-color: #005996;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1000;
-}
-/* links sub menu */
-#menu li .hidden li a {
-  width: 100px;
-  border-bottom: 1px solid #202020;
-  border-right: none;
-  box-shadow: none;
-}
-/* menu hover */
-#menu li:hover .hidden {
-  margin-top: -65px;
-  opacity: 1;
-  -webkit-transition: all 0.5s ease; /* safari and chrome */
-  -moz-transition: all 0.5s ease; /* firefox */
-  -o-transition: all 0.5s ease; /* opera */
-  transition: all 0.5s ease;
-  visibility: visible;
-}
-@media only screen and (max-width: 768px) {
-  
-#menu {
-  background: none;
-  border: none;
-  border-radius: 0;  
-  box-shadow: none;
-  text-align: center;
-  display: none;  
-}
-  
-/* rendiamo gli elementi dei menu elementi di blocco */  
-  
-ul li {
-  display: block;
-}
-  
-/* impostiamo la larghezza massima per gli elementi dei menu e i links */  
-  
-ul li, ul li a {
-  padding-right: 0;
-  padding-left: 0;
-  width: 100%;
-}
-  
-#menu li .hidden li, #menu li .hidden li a {
-  width: 100%;
-}
-/* rendiamo visibili gli elementi del sub menu solo al passaggio del mouse */  
-  
-#menu li .hidden li {
-  display: none;
-}
- 
-#menu li:hover .hidden li {
-  display: block;
-}  
-/* aumentiamo la grandezza dei links */ 
-  
-li a {
-  font: bold 0.9em 'Cougrette', cursive;
-  font-sixe: 1.2em;
-} 
-  
-/* resettiamo la posizione degli elementi del menu */  
-  
-#menu li {
-  position: static;
-}  
-  
-/* resettiamo la posizione del sub menu e lo rendiamo visibile */  
-#menu li .hidden {
-  position: static;
-  opacity: 1;
-  visibility: visible;
-}
-  
-/* rimuoviamo bordo e ombreggiatura dai links del menu */
-  
-#menu li a {
-  border: none;
-  box-shadow: none;  
-}  
-  
-/* nessuna animazione al passaggio del mouse */  
-  
-#menu li:hover .hidden {
-  margin: 0;
-} 
-  
-/* rimuoviamo il bordo dai links del sub menu */  
-  
-#menu li .hidden li a {
-  border: none;
-}
-  
-/*diamo un colore di sfondo agli elementi del menu e del sub menu */
-  
-#menu li {
-  background-color:  black;
-}
-  
-#menu li .hidden li {
-  background-color: #009688;
-} 
-}
-/* diamo uno stile al pulsante del menu e nascondiamolo */
-.showMenu {
-  padding: 10px 0;
-  color: white;
-  background:  #009688;
-  text-align: center;
-  display: none;
-  font-size: 1.3em;
-  
-}
-/* nascondiamo il checkbox */
-input[type=checkbox]{
-  display: none;
-}
-/* mostriamo il menu quando il checkbox viene selezionato */
-input[type=checkbox]:checked ~ #menu {
-  display: block;
-}
-/* mostriamo il pulsante del menu */
-        
-.showMenu {
-  display: block;
-}
-  </style>
-    <!-- Footer -->
-    <footer class="page-footer teal">
-        <div class="container">
-            <div class="row">
-                <div id="Contatti" class="contatti col l12 s12 center">
-                    <h5 class="white-text">Contatti</h5>
-                    <a href="mailto:eliaromano2000@gmail.com" class="social-icon">
-                        <i class="fa fa-envelope" aria-hidden="true"></i>
-                    </a>
-                    <a href="https://www.facebook.com/WebDevelopment-525024771309932/?modal=admin_todo_tour" target="_blank" class="social-icon">
-                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                    </a>
-                    <a href="" target="_blank" class="social-icon"><!-- Link to Twitter -->
-                        <i class="fa fa-twitter" aria-hidden="true"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">WebDevelopment &copy</a>
-            </div>
-        </div>
-    </footer>
+    <!-- Navbar -->
+    <div class="header">
+        <div class="wrapper">
+            <a id="logo" href="#"><!-- Website Link & logo from style--></a>
+        <form id="search_form" href="[website]/ricerca" method="get" itemprop="ptentialAction" itemscope itemtype="https://schema.org/SearchAction" role="search">
+            <meta itemprop="target" content="
     <!-- Preorder Panel -->
+    <!-- Facoltativo -->
+    <a href="optional_shortcut" id="backgroundLink" style="background: url(image_link)
     <div id="panel-center">
         <div class="productPreorder mainShadow">
             
@@ -395,6 +161,31 @@ input[type=checkbox]:checked ~ #menu {
         <div class="promo">
         </div>
     </div>
+    <!-- Footer -->
+    <footer class="page-footer teal">
+        <div class="container">
+            <div class="row">
+                <div id="Contatti" class="contatti col l12 s12 center">
+                    <h5 class="white-text">Contatti</h5>
+                    <a href="mailto:eliaromano2000@gmail.com" class="social-icon">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.facebook.com/WebDevelopment-525024771309932/?modal=admin_todo_tour" target="_blank" class="social-icon">
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    </a>
+                    <a href="" target="_blank" class="social-icon"><!-- Link to Twitter -->
+                        <i class="fa fa-twitter" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">WebDevelopment &copy</a>
+            </div>
+        </div>
+    </footer>
+
 
     <!--  Scripts-->
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
