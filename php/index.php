@@ -1,3 +1,7 @@
+<?php require_once 'conn.php'; ?>
+<?php include 'php/scriptBS.php'; ?>
+<?php include 'php/navbar.php'; ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -39,39 +43,39 @@
 <body>
   <!-- Fixed Navbar -->
   <div class="navbar-fixed">
-  <label for="showMenu" class="showMenu">
-  <i class="fa fa-align-justify fa-lg"></i>
-  WebDevelopment
-</label>
-<input type="checkbox" id="showMenu" role="button">
- <ul id="menu"> 
-  <li><a href="#">Home</a></li>
-  <li><a href="prezzi.html">Prezzi</a>
-    <ul class="hidden">
-      <li><a href="buy_game.html">Giochi € X,XX</a></li>
-      <li><a href="buy_work.html">Lavoro € X,XX</a></li>
+    <label for="showMenu" class="showMenu">
+      <i class="fa fa-align-justify fa-lg"></i>
+      WebDevelopment
+    </label>
+    <input type="checkbox" id="showMenu" role="button">
+    <ul id="menu"> 
+      <li><a href="#">Home</a></li>
+      <li><a href="../html/prezzi.html">Prezzi</a>
+        <ul class="hidden">
+          <li><a href="../html/buy_game.html">Giochi € X,XX</a></li>
+          <li><a href="../html/buy_work.html">Lavoro € X,XX</a></li>
+        </ul>
+      </li>
+      <li><a href="../html/come_funziona.html">Come Funziona</a>
+        <!--<ul class="hidden"> 
+          <li><a href="http://">Tutorial 1</a></li>
+          <li><a href="http://">Tutorial 2</a></li>
+          <li><a href="http://">Tutorial 3</a></li>
+        </ul>-->
+      </li>
+      <li><a href="#Registrazione">Registrazione</a></li>
+      <li><a href="#Contatti">Contatti</a>
+        <!--<ul class="hidden"> 
+          <li><a href="http://">Modello 1</a></li>
+          <li><a href="http://">Modello 2</a></li>
+          <li><a href="http://">Modello 3</a></li>
+          <li><a href="http://">Modello 4</a></li>
+          <li><a href="http://">Modello 5</a></li>
+        </ul>-->
+      </li>
+      <!--<li><a id="donate" href="http://">Contatti</a></li>-->
     </ul>
-  </li>
-  <li><a href="come_funziona.html">Come Funziona</a>
-    <!--<ul class="hidden"> 
-      <li><a href="http://">Tutorial 1</a></li>
-      <li><a href="http://">Tutorial 2</a></li>
-      <li><a href="http://">Tutorial 3</a></li>
-    </ul>-->
-  </li>
-  <li><a href="#Registrazione">Registrazione</a></li>
-  <li><a href="#Contatti">Contatti</a>
-    <!--<ul class="hidden"> 
-      <li><a href="http://">Modello 1</a></li>
-      <li><a href="http://">Modello 2</a></li>
-      <li><a href="http://">Modello 3</a></li>
-      <li><a href="http://">Modello 4</a></li>
-      <li><a href="http://">Modello 5</a></li>
-    </ul>-->
-  </li>
-  <!--<li><a id="donate" href="http://">Contatti</a></li>-->
-</ul>
-</div>
+  </div>
 <style type="text/css">
 
  /* reset stili */
