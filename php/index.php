@@ -1,5 +1,9 @@
+<?php require_once 'conn.php'; ?>
+<?php include 'php/scriptBS.php'; ?>
+<?php include 'php/navbar.php'; ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><!-- 8 bit -->
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -35,25 +39,252 @@
     })
     (window,document,'script','//load.sumo.com/');
   </script>
-
-  <!-- Bootstrap 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  --></head>
+</head>
 <body>
   <!-- Fixed Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-      </button>
-      <a href="#" class="brand-logo">WebDevelopment</a>
-      <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-              <li><a href="#">Home</a></li>
-              <li><a href="prezzi.html">Prezzi</a></li>
-              <li><a href="come_funziona.html">Come Funziona</a></li>
-              <li><a href="#Registrazione">Registrazione</a></li>
-              <li><a href="#Contatti">Contatti</a></li>
-          </ul>
+  <div class="navbar-fixed">
+    <label for="showMenu" class="showMenu">
+      <i class="fa fa-align-justify fa-lg"></i>
+      WebDevelopment
+    </label>
+    <input type="checkbox" id="showMenu" role="button">
+    <ul id="menu"> 
+      <li><a href="#">Home</a></li>
+      <li><a href="../html/prezzi.html">Prezzi</a>
+        <ul class="hidden">
+          <li><a href="../html/buy_game.html">Giochi € X,XX</a></li>
+          <li><a href="../html/buy_work.html">Lavoro € X,XX</a></li>
+        </ul>
+      </li>
+      <li><a href="../html/come_funziona.html">Come Funziona</a>
+        <!--<ul class="hidden"> 
+          <li><a href="http://">Tutorial 1</a></li>
+          <li><a href="http://">Tutorial 2</a></li>
+          <li><a href="http://">Tutorial 3</a></li>
+        </ul>-->
+      </li>
+      <li><a href="#Registrazione">Registrazione</a></li>
+      <li><a href="#Contatti">Contatti</a>
+        <!--<ul class="hidden"> 
+          <li><a href="http://">Modello 1</a></li>
+          <li><a href="http://">Modello 2</a></li>
+          <li><a href="http://">Modello 3</a></li>
+          <li><a href="http://">Modello 4</a></li>
+          <li><a href="http://">Modello 5</a></li>
+        </ul>-->
+      </li>
+      <!--<li><a id="donate" href="http://">Contatti</a></li>-->
+    </ul>
+  </div>
+<style type="text/css">
+
+ /* reset stili */
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* lista orizzontale */
+
+#menu li {
+  display: inline-block;
+  position: relative;
+}
+
+/* menu */
+
+#menu {
+  width: 100%;
+  background-color: #005996;
+  background: -moz-linear-gradient(#444, #111); /* firefox*/
+  background: linear-gradient(#444, #111);
+  border: 1px solid #222;
+  border-radius: 6px;
+  box-shadow: 1px 1px 4px #777;
+  text-align: center;
+}
+
+/* links */
+
+li a {
+  display: block;
+  padding: 12px 20px;
+  width: 150px;
+  color: #999;
+  text-transform: uppercase;
+  font: bold 0.7em 'Cougrette', cursive;
+  text-decoration: none;
+  text-shadow: 0 1px #000;
+  border-right: 1px solid #222;
+  box-shadow: 1px 0 #444;
+}
+
+/* rimuoviamo il bordo e l'ombreggiatura dall'ultimo link del menu */
+
+#donate {
+  border: none;
+  box-shadow: none;  
+}
+
+/* links hover */
+
+a:hover {
+  color: #5b9279;
+}
+/* sub menu */
+
+#menu li .hidden {
+  display: block;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  background-color: #005996;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+/* links sub menu */
+
+#menu li .hidden li a {
+  width: 100px;
+  border-bottom: 1px solid #202020;
+  border-right: none;
+  box-shadow: none;
+}
+/* menu hover */
+
+#menu li:hover .hidden {
+  margin-top: -65px;
+  opacity: 1;
+  -webkit-transition: all 0.5s ease; /* safari and chrome */
+  -moz-transition: all 0.5s ease; /* firefox */
+  -o-transition: all 0.5s ease; /* opera */
+  transition: all 0.5s ease;
+  visibility: visible;
+}
+@media only screen and (max-width: 768px) {
+  
+#menu {
+  background: none;
+  border: none;
+  border-radius: 0;  
+  box-shadow: none;
+  text-align: center;
+  display: none;  
+}
+  
+/* rendiamo gli elementi dei menu elementi di blocco */  
+  
+ul li {
+  display: block;
+}
+  
+/* impostiamo la larghezza massima per gli elementi dei menu e i links */  
+  
+ul li, ul li a {
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+}
+  
+#menu li .hidden li, #menu li .hidden li a {
+  width: 100%;
+}
+
+/* rendiamo visibili gli elementi del sub menu solo al passaggio del mouse */  
+  
+#menu li .hidden li {
+  display: none;
+}
+ 
+#menu li:hover .hidden li {
+  display: block;
+}  
+
+/* aumentiamo la grandezza dei links */ 
+  
+li a {
+  font: bold 0.9em 'Cougrette', cursive;
+  font-sixe: 1.2em;
+} 
+  
+/* resettiamo la posizione degli elementi del menu */  
+  
+#menu li {
+  position: static;
+}  
+  
+/* resettiamo la posizione del sub menu e lo rendiamo visibile */  
+
+#menu li .hidden {
+  position: static;
+  opacity: 1;
+  visibility: visible;
+}
+  
+/* rimuoviamo bordo e ombreggiatura dai links del menu */
+  
+#menu li a {
+  border: none;
+  box-shadow: none;  
+}  
+  
+/* nessuna animazione al passaggio del mouse */  
+  
+#menu li:hover .hidden {
+  margin: 0;
+} 
+  
+/* rimuoviamo il bordo dai links del sub menu */  
+  
+#menu li .hidden li a {
+  border: none;
+}
+  
+/*diamo un colore di sfondo agli elementi del menu e del sub menu */
+  
+#menu li {
+  background-color:  black;
+}
+  
+#menu li .hidden li {
+  background-color: #009688;
+} 
+
+}
+
+/* diamo uno stile al pulsante del menu e nascondiamolo */
+
+.showMenu {
+  padding: 10px 0;
+  color: white;
+  background:  #009688;
+  text-align: center;
+  display: none;
+  font-size: 1.3em;
+  
+}
+/* nascondiamo il checkbox */
+
+input[type=checkbox]{
+  display: none;
+}
+
+/* mostriamo il menu quando il checkbox viene selezionato */
+
+input[type=checkbox]:checked ~ #menu {
+  display: block;
+}
+/* mostriamo il pulsante del menu */
+        
+.showMenu {
+  display: block;
+}
+
+  </style>
           <!--<form class="form-inline my-2 my-lg-0">
               <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
               <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
@@ -66,7 +297,7 @@
     <div class="section-intro no-pad-bot">
       <div class="container">
         <br><br>
-        <h1 class="header center grey-text">Web Development</h1>
+        <h1 class="header center">Web Development</h1>
         <div class="row center">
           <h5 class="header-sub col s12 light">Crea la miglir pagina per la tua attività!</h5>
         </div>
@@ -208,10 +439,5 @@
 
     gtag('config', 'UA-130663970-1');
   </script>
-
-  <!-- Bootstrap 
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  --></body>
+</body>
 </html>
